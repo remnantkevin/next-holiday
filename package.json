@@ -19,6 +19,7 @@
     "preact": "10.13.2"
   },
   "devDependencies": {
+    "@netlify/functions": "1.4.0",
     "@preact/preset-vite": "2.5.0",
     "@types/eslint": "8.37.0",
     "@types/node": "18.16.3",

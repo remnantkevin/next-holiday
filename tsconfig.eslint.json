@@ -4,5 +4,5 @@
     "checkJs": true,
     "noEmit": true
   },
-  "files": ["./.eslintrc.cjs", "./api/.eslintrc.cjs", "./website/.eslintrc.cjs", "./vite.config.ts"]
+  "files": ["./.eslintrc.cjs", "./backend/.eslintrc.cjs", "./website/.eslintrc.cjs", "./vite.config.ts"]
 }
