@@ -18,14 +18,14 @@
   # Default build command.
   command = "npm run build"
 
-[context.production.environment]
-  NODE_ENV = "production"
+# [context.production.environment]
+#   NODE_ENV = "production"
 
-[context.deploy-preview.environment]
-  NODE_ENV = "production"
+# [context.deploy-preview.environment]
+#   NODE_ENV = "production"
 
-[context.branch-deploy.environment]
-  NODE_ENV = "production"
+# [context.branch-deploy.environment]
+#   NODE_ENV = "production"
 
 [functions]
   # Sets a custom directory for Netlify Functions
