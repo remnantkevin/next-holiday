@@ -13,7 +13,7 @@
   # directory if one has been set, or the root directory if
   # a base has not been set. This sample publishes the directory
   # located at the absolute path "root/project/build-output"
-  publish = "website/build/"
+  publish = "website/dist/"
 
   # Default build command.
   command = "npm run build"
