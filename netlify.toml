@@ -18,6 +18,8 @@
   # Default build command.
   command = "npm run build"
 
+  edge-functions = "backend/edge/"
+
 # [context.production.environment]
 #   NODE_ENV = "production"
 

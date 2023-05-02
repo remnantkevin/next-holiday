@@ -3,9 +3,10 @@
 /** @type {import("@types/eslint").Linter.Config} */
 module.exports = {
   env: {
-    browser: false,
+    browser: true,
     es6: true,
     node: true
   },
-  extends: ["../.eslintrc.cjs"]
+  extends: ["../.eslintrc.cjs"],
+  overrides: [{ excludedFiles: ["edge"] }]
 };
