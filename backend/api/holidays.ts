@@ -1,6 +1,7 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
-// http://localhost:8888/.netlify/functions/function-one
+// TODO: take in query params: ?country=AU&region=WA
+// start with only getting raw github content for au, wa
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   console.log(JSON.stringify({ event }));
   console.log(JSON.stringify({ context }));

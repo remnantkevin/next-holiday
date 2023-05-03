@@ -9,5 +9,5 @@ export default (request: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/code"
+  path: "/location"
 };
