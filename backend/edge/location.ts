@@ -1,10 +1,14 @@
 import type { Config, Context } from "netlify:edge";
 
 export default (request: Request, context: Context) => {
-  console.log(JSON.stringify({ request }));
-  console.log(JSON.stringify({ context }));
-  return new Response("Hello, World!", {
-    headers: { "content-type": "text/html" }
+  console.log({ request });
+  console.log({ context });
+  return Response.json({
+    testEvent: true,
+    countryCode: context.geo.country?.code,
+    countryName: context.geo.country?.name,
+    subdivisionCode: context.geo.subdivision?.code,
+    subdivisionName: context.geo.subdivision?.name
   });
 };
 
