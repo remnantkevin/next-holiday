@@ -16,6 +16,7 @@ export function App() {
     const holiday = await fetch(
       `/.netlify/functions/holidays?countryCode=${location.countryCode}&subdivisionCode=${location.subdivisionCode}`
     ).then((r) => r.json());
+
     setCountry(holiday.countryCode);
     setSubdivision(holiday.subdivisionCode);
   }

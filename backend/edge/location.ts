@@ -1,8 +1,9 @@
 import type { Config, Context } from "netlify:edge";
 
 export default (request: Request, context: Context) => {
-  console.log({ request });
-  console.log({ context });
+  console.log(JSON.stringify({ request }));
+  console.log(JSON.stringify({ context }));
+
   return Response.json({
     testEvent: true,
     countryCode: context.geo.country?.code,
