@@ -13,7 +13,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  ignorePatterns: ["dist"],
+  ignorePatterns: ["dist", "*.html"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
