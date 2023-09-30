@@ -1,0 +1,13 @@
+{
+  "name": "next-holiday",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "author": "Kevin Elliott",
+  "scripts": {
+    "build": "cd packages/website/ && npm run build"
+  },
+  "dependencies": {
+    "netlify-cli": "16.4.2"
+  }
+}
