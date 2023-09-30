@@ -1,0 +1,3 @@
+# API
+
+Netlify edge functions.
