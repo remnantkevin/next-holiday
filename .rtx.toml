@@ -1,5 +1,0 @@
-[tools]
-node = "18.16.0"
-
-[env]
-NODE_VERSION="18.16.0"
