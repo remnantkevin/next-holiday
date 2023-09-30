@@ -11,8 +11,5 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^3.2.0"
   }
 }
