@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "checkJs": true,
-    "noEmit": true
-  },
-  "files": ["./.eslintrc.cjs", "./backend/.eslintrc.cjs", "./website/.eslintrc.cjs", "./vite.config.ts"]
-}
