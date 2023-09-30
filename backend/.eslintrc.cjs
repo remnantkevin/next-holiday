@@ -8,5 +8,5 @@ module.exports = {
     node: true
   },
   extends: ["../.eslintrc.cjs"],
-  overrides: [{ excludedFiles: ["edge"] }]
+  ignorePatterns: ["edge"]
 };
