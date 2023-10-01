@@ -6,12 +6,12 @@
   # Directory to change to before starting a build.
   # This is where we will look for package.json/.nvmrc/etc.
   # If not set, defaults to the root directory.
-  base = "app/frontend"
+  base = "app"
   command = "npm run build"
-  publish = "dist"
+  publish = "frontend/dist"
 
   # Sets a custom directory for Netlify edge functions.
-  edge_functions = "app/backend"
+  edge_functions = "backend"
 
 [dev]
   command = "npm run dev"
