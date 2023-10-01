@@ -1,4 +1,4 @@
-import { Context } from "https://edge.netlify.com/v1/index.ts";
+import { Context } from "https://edge.netlify.com";
 
 export default (request: Request, context: Context) => {
   console.log(JSON.stringify({ request }));
