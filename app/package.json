@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview"
+  },
+  "dependencies": {
+    "lit": "3.0.0-pre.1"
+  },
+  "devDependencies": {
+    "typescript": "5.2.2",
+    "vite": "4.4.9"
+  }
+}
