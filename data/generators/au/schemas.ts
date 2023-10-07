@@ -3,7 +3,7 @@ import { SUBDIVISION_CODES, SUBDIVISION_NAMES } from "./constants.ts";
 import type { SubdivisionCode, SubdivisionName } from "./types.ts";
 
 type APIRecordSchema = {
-  /** Date string of the form `YYYYMMDD` */
+  /** Date string of the form `YYYYMMDD`. */
   Date: string;
   "Holiday Name": string;
   Information: string;
@@ -11,8 +11,8 @@ type APIRecordSchema = {
   Jurisdiction: SubdivisionCode;
 };
 
-/** Date string of the form `YYYYMMDD` */
-export const DateStringSchema = st.string({
+/** Date string of the form `YYYYMMDD`. */
+const DateStringSchema = st.string({
   match: /^(202[3-4])([0-1]\d)([0-3]\d)$/,
 });
 
