@@ -6,7 +6,7 @@ import type {
   SubdivisionNames,
   Year,
   Years,
-} from "./schema-types.ts";
+} from "./types.ts";
 
 export const GENERATED_DATA_FILE_PATH = fromFileUrl(
   import.meta.resolve("../../generated/za.json")

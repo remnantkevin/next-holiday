@@ -1,3 +1,12 @@
+export type HolidayBase = {
+  date: string;
+  dateObserved?: string;
+  description?: string;
+  name: string;
+};
+
+export type Holiday = HolidayBase & { sortKey: string };
+
 export type SubdivisionCodes = [
   "ec",
   "fs",
@@ -41,12 +50,3 @@ export type SubdivisionMapping = {
 export type Years = ["2023", "2024"];
 
 export type Year = Years[number];
-
-export type HolidayBase = {
-  date: string;
-  dateObserved?: string;
-  description?: string;
-  name: string;
-};
-
-export type Holiday = HolidayBase & { sortKey: string };

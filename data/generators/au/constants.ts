@@ -4,7 +4,7 @@ import type {
   SubdivisionMapping,
   SubdivisionNames,
   Years,
-} from "./schema-types.ts";
+} from "./types.ts";
 
 export const GENERATED_DATA_FILE_PATH = fromFileUrl(
   import.meta.resolve("../../generated/au.json")

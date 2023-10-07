@@ -3,7 +3,7 @@
  */
 
 import { sortBy } from "https://deno.land/std@0.203.0/collections/sort_by.ts";
-import type { Meta } from "../../shared/schema-types.ts";
+import type { Meta } from "../../shared/types.ts";
 import {
   API_SQL,
   API_URL,
@@ -15,8 +15,8 @@ import {
   SUBDIVISION_NAMES,
   YEARS,
 } from "./constants.ts";
-import { APIResponseSchema, HolidaySchema } from "./schema-types.ts";
-import type { Holiday, Year, Years } from "./schema-types.ts";
+import { APIResponseSchema, type Holiday, HolidaySchema } from "./schemas.ts";
+import type { Year, Years } from "./types.ts";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // MAIN

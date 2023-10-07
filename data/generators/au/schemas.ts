@@ -1,57 +1,6 @@
 import * as st from "npm:simple-runtypes";
 import { SUBDIVISION_CODES, SUBDIVISION_NAMES } from "./constants.ts";
-
-type HolidayBase = {
-  date: string;
-  description: string;
-  moreInfoURL: string;
-  name: string;
-  subdivisionCode: SubdivisionCode;
-  subdivisionName: SubdivisionName;
-};
-
-export type Holiday = HolidayBase & { sortKey: string };
-
-export type SubdivisionNames = [
-  "Australian Capital Territory",
-  "New South Wales",
-  "Northern Territory",
-  "Queensland",
-  "South Australia",
-  "Tasmania",
-  "Victoria",
-  "Western Australia"
-];
-
-export type SubdivisionName = SubdivisionNames[number];
-
-export type SubdivisionCodes = [
-  "act",
-  "nsw",
-  "nt",
-  "qld",
-  "sa",
-  "tas",
-  "vic",
-  "wa"
-];
-
-export type SubdivisionCode = SubdivisionCodes[number];
-
-export type SubdivisionMapping = {
-  act: "Australian Capital Territory";
-  nsw: "New South Wales";
-  nt: "Northern Territory";
-  qld: "Queensland";
-  sa: "South Australia";
-  tas: "Tasmania";
-  vic: "Victoria";
-  wa: "Western Australia";
-};
-
-export type Years = ["2023", "2024"];
-
-export type Year = Years[number];
+import type { SubdivisionCode, SubdivisionName } from "./types.ts";
 
 type APIRecordSchema = {
   /** Date string of the form `YYYYMMDD` */
@@ -94,6 +43,17 @@ export const APIResponseSchema = st.record<APIResponseSchema>({
     records: st.array(APIRecordSchema),
   }),
 });
+
+type HolidayBase = {
+  date: string;
+  description: string;
+  moreInfoURL: string;
+  name: string;
+  subdivisionCode: SubdivisionCode;
+  subdivisionName: SubdivisionName;
+};
+
+export type Holiday = HolidayBase & { sortKey: string };
 
 export const HolidaySchema = st.record<Holiday>({
   date: DateStringSchema,
