@@ -3,25 +3,25 @@
  */
 
 import { sortBy } from "https://deno.land/std@0.203.0/collections/sort_by.ts";
-import type { Meta } from "../../shared/types.ts";
 import {
   CODE,
   GENERATED_DATA_FILE_PATH,
   HOLIDAY_DATA,
   NAME,
   SUBDIVISION_CODES,
-  SUBDIVISION_MAPPING,
+  SUBDIVISION_CODE_TO_NAME_MAPPING,
   SUBDIVISION_NAMES,
   YEARS,
 } from "./constants.ts";
 import type { Holiday, Years } from "./types.ts";
+import { Meta } from "../../shared/types.ts";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // MAIN
 // ---------------------------------------------------------------------------------------------------------------------
 
 export async function run() {
-  const holidays = getHolidays(YEARS);
+  const holidays = await getHolidays(YEARS);
   await writeHolidaysToFile(holidays);
 }
 
@@ -37,15 +37,14 @@ if (import.meta.main) {
 // ---------------------------------------------------------------------------------------------------------------------
 
 function getHolidays(years: Years): Holiday[] {
-  const holidayData = years.flatMap((it) => HOLIDAY_DATA[it]);
+  const holidayData = years.flatMap((year) => HOLIDAY_DATA[year]);
   const holidays = holidayData.map(
     (it): Holiday => ({
       ...it,
       sortKey: `${CODE}-${it.date}`,
     })
   );
-  const holidaysSorted = sortBy(holidays, (it) => it.sortKey);
-  return holidaysSorted;
+  return sortBy(holidays, (it) => it.sortKey);
 }
 
 async function writeHolidaysToFile(holidays: Holiday[]): Promise<void> {
@@ -65,7 +64,7 @@ function buildMeta() {
   const subdivisions = {
     codes: SUBDIVISION_CODES,
     names: SUBDIVISION_NAMES,
-    mapping: SUBDIVISION_MAPPING,
+    mapping: SUBDIVISION_CODE_TO_NAME_MAPPING,
     count: SUBDIVISION_CODES.length,
   };
 
@@ -73,7 +72,10 @@ function buildMeta() {
 
   const years = YEARS;
 
-  const moreInfoUrls = ["https://www.gov.za/about-sa/public-holidays"];
+  const moreInfoUrls = [
+    "https://www.citizensinformation.ie/en/employment/employment-rights-and-conditions/leave-and-holidays/public-holidays-in-ireland",
+    "https://www.workplacerelations.ie/en/what_you_should_know/public-holidays",
+  ];
 
   return {
     code,
