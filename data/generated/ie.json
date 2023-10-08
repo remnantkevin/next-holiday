@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "code": "ie",
+    "name": "Ireland",
+    "subdivisions": {
+      "codes": ["c", "l", "m", "u"],
+      "names": [
+        "Connaught (Connacht)",
+        "Leinster (Laighin)",
+        "Munster (An Mhumhain)",
+        "Ulster (Ulaidh)"
+      ],
+      "mapping": {
+        "c": "Connaught (Connacht)",
+        "l": "Leinster (Laighin)",
+        "m": "Munster (An Mhumhain)",
+        "u": "Ulster (Ulaidh)"
+      },
+      "count": 4
+    },
+    "hasSubdivisionHolidays": false,
+    "years": ["2023", "2024"],
+    "moreInfoUrls": [
+      "https://www.citizensinformation.ie/en/employment/employment-rights-and-conditions/leave-and-holidays/public-holidays-in-ireland",
+      "https://www.workplacerelations.ie/en/what_you_should_know/public-holidays"
+    ]
+  },
+  "data": [
+    { "date": "20230101", "name": "New Year's Day", "sortKey": "ie-20230101" },
+    {
+      "date": "20230206",
+      "name": "Saint Brigid's Day",
+      "description": "First Monday in February, or 1 February if the date falls on a Friday. Introduced as a public holiday in 2023.",
+      "sortKey": "ie-20230206"
+    },
+    {
+      "date": "20230317",
+      "name": "Saint Patrick's Day",
+      "sortKey": "ie-20230317"
+    },
+    { "date": "20230410", "name": "Easter Monday", "sortKey": "ie-20230410" },
+    {
+      "date": "20230501",
+      "name": "May Day",
+      "description": "First Monday in May",
+      "sortKey": "ie-20230501"
+    },
+    {
+      "date": "20230605",
+      "name": "June Holiday",
+      "description": "First Monday in June",
+      "sortKey": "ie-20230605"
+    },
+    {
+      "date": "20230807",
+      "name": "August Holiday",
+      "description": "First Monday in August",
+      "sortKey": "ie-20230807"
+    },
+    {
+      "date": "20231030",
+      "name": "October Holiday",
+      "description": "Last Monday in October",
+      "sortKey": "ie-20231030"
+    },
+    { "date": "20231225", "name": "Christmas Day", "sortKey": "ie-20231225" },
+    {
+      "date": "20231226",
+      "name": "Saint Stephen's Day",
+      "sortKey": "ie-20231226"
+    },
+    { "date": "20240101", "name": "New Year's Day", "sortKey": "ie-20240101" },
+    {
+      "date": "20240205",
+      "name": "Saint Brigid's Day",
+      "description": "First Monday in February, or 1 February if the date falls on a Friday. Introduced as a public holiday in 2023.",
+      "sortKey": "ie-20240205"
+    },
+    {
+      "date": "20240317",
+      "name": "Saint Patrick's Day",
+      "sortKey": "ie-20240317"
+    },
+    { "date": "20240401", "name": "Easter Monday", "sortKey": "ie-20240401" },
+    {
+      "date": "20240506",
+      "name": "May Day",
+      "description": "First Monday in May",
+      "sortKey": "ie-20240506"
+    },
+    {
+      "date": "20240603",
+      "name": "June Holiday",
+      "description": "First Monday in June",
+      "sortKey": "ie-20240603"
+    },
+    {
+      "date": "20240805",
+      "name": "August Holiday",
+      "description": "First Monday in August",
+      "sortKey": "ie-20240805"
+    },
+    {
+      "date": "20241028",
+      "name": "October Holiday",
+      "description": "Last Monday in October",
+      "sortKey": "ie-20241028"
+    },
+    { "date": "20241225", "name": "Christmas Day", "sortKey": "ie-20241225" },
+    {
+      "date": "20241226",
+      "name": "Saint Stephen's Day",
+      "sortKey": "ie-20241226"
+    }
+  ]
+}

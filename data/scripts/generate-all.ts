@@ -5,7 +5,7 @@ import { join, fromFileUrl } from "https://deno.land/std@0.203.0/path/mod.ts";
 // ---------------------------------------------------------------------------------------------------------------------
 
 const GENERATORS_DIR_PATH = fromFileUrl(import.meta.resolve("../generators"));
-const ALLOWED_GENERATOR_DIR_NAMES = ["au", "gb", "nz", "za"] as const;
+const ALLOWED_GENERATOR_DIR_NAMES = ["au", "gb", "ie", "nz", "za"] as const;
 const GENERATOR_ENTRYPOINT_FILE_NAME = "main.ts" as const;
 
 // ---------------------------------------------------------------------------------------------------------------------
