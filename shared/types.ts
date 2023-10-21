@@ -11,7 +11,7 @@ export type Meta = {
   years: string[];
   moreInfoUrls: string[];
   api?: {
-    url: string;
+    // url: string;
     [key: string]: string;
   };
 };

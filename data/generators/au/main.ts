@@ -3,7 +3,8 @@
  */
 
 import { sortBy } from "https://deno.land/std@0.203.0/collections/sort_by.ts";
-import type { Meta } from "../../shared/types.ts";
+import type { Meta } from "../../../shared/types.ts";
+import { getJson } from "../../../shared/utils.ts";
 import {
   API_SQL,
   API_URL,
@@ -45,8 +46,7 @@ async function getHolidays(years: Years): Promise<Holiday[]> {
 }
 
 async function getHolidaysForYear(year: Year): Promise<Holiday[]> {
-  const response = await fetch(buildAPIRequestURL(year));
-  const responseJSON: unknown = await response.json();
+  const [responseJSON] = await getJson(buildAPIRequestURL(year));
 
   const {
     result: { records },

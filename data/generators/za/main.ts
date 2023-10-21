@@ -3,7 +3,7 @@
  */
 
 import { sortBy } from "https://deno.land/std@0.203.0/collections/sort_by.ts";
-import type { Meta } from "../../shared/types.ts";
+import type { Meta } from "../../../shared/types.ts";
 import {
   CODE,
   GENERATED_DATA_FILE_PATH,
