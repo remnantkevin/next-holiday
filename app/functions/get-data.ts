@@ -17,6 +17,9 @@
 //   KV: KVNamespace;
 // }
 
+import type { SharedType } from "../../shared/types";
+import { TEST_CONSTANT } from "../../shared/constants";
+
 export const onRequest: PagesFunction = async (context) => {
   // const value = await context.env.KV.get("example");
 
@@ -31,9 +34,14 @@ export const onRequest: PagesFunction = async (context) => {
   const subdivisionCode = context.request.cf?.regionCode ?? "";
   const subdivisionName = context.request.cf?.region ?? "";
 
+  const obj: SharedType = { iamasharedtype: true };
+  const testConst = TEST_CONSTANT;
+
   return Response.json({
     countryCode,
     subdivisionCode,
     subdivisionName,
+    obj,
+    testConst,
   });
 };
