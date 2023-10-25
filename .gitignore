@@ -1,4 +1,5 @@
 .netlify
+.wrangler
 
 # Logs
 logs
