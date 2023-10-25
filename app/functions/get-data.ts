@@ -21,7 +21,9 @@ export const onRequest: PagesFunction = async (context) => {
   // const value = await context.env.KV.get("example");
 
   console.log(JSON.stringify({ context }));
-  console.log(JSON.stringify({ "context.request.headers.entries()": context.request.headers.entries() }));
+  console.log(
+    JSON.stringify({ "context.request.headers.entries()": Object.fromEntries(context.request.headers.entries()) })
+  );
 
   return new Response("testResponse");
 };
