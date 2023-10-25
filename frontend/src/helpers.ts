@@ -1,5 +1,5 @@
-import { getJson } from "../../../shared/utils";
-import { COUNTRY_CODE_HEADER_NAME, SUBDIVISION_CODE_HEADER_NAME } from "../../../shared/constants";
+import { getJson } from "../../shared/utils";
+import { COUNTRY_CODE_HEADER_NAME, SUBDIVISION_CODE_HEADER_NAME } from "../../shared/constants";
 import { ErrorResponseSchema, type ErrorResponse, HolidayResponseSchema, type HolidayResponse } from "./schemas";
 
 export async function getHolidayData(
@@ -24,7 +24,7 @@ export async function getHolidayData(
   let searchParamsString = searchParams.toString();
   searchParamsString = searchParamsString ? `?${searchParamsString}` : "";
 
-  const url = `/get-data${searchParamsString}`;
+  const url = `/api/get-data${searchParamsString}`;
 
   const [rawData, rawResponse] = await getJson(url);
 

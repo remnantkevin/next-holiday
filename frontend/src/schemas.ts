@@ -1,5 +1,5 @@
 import * as st from "simple-runtypes";
-import type { Meta } from "../../../shared/types";
+import type { Meta } from "../../shared/types";
 
 const StringArraySchema = st.array(st.string());
 const StringRecordSchema = st.dictionary(st.string(), st.string());

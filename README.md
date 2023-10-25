@@ -4,55 +4,35 @@
 
 ```text
 ./
-├── app/
-│   ├── backend/          # Netlify edge functions (Deno)
-│   └── frontend/         # Netlify site (Node.js, Vite, Lit, TypeScript)
 ├── data/
-│   ├── generated/        # Generated holiday JSON data
-│   ├── generators/       # Holiday JSON data generators (Deno)
-│   └── scripts/          # Scripts that run the data generators (Deno)
-├── netlify.toml          # Netlify config file
-└── README.md
+├── frontend/
+├── functions/
+└── shared/
 ```
 
-## Development
+| Directory    | Description                                                                                                                                                                                                          |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data/`      | Generated holiday data (JSON) and the generators that build this data. Uses [Deno](https://deno.com).                                                                                                                |
+| `frontend/`  | Website frontend. Uses TypeScript, [Lit](https://lit.dev), [Shoelace web components](https://shoelace.style), and [Vite](https://vitejs.dev). Hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages). |
+| `functions/` | Website backend. An API of [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/platform/functions). Uses TypeScript.                                                                                |
+| `shared/`    | Constants, utilities, and types used across the other directories. Uses TypeScript.                                                                                                                                  |
 
-### Requirements
+## Local development
 
-Install `netlify-cli`:
+### Install dependencies
 
-```text
-npm install -g netlify-cli
+In the root directory run:
+
+```sh
+npm install
 ```
 
-Link local project to Netlify site:
+### Run website (frontend and backend)
 
-```text
-npx netlify link
+In the root directory run:
+
+```sh
+npx wrangler pages dev -- npm run dev
 ```
 
-### Run development server
-
-From within `app/`, run:
-
-```text
-npx netlify dev
-```
-
-The dev server is available at `http://localhost:8888`.
-
-### Create local build and serve built files
-
-From the root of the project, run:
-
-```text
-npx netlify build
-```
-
-to create a local build, or run:
-
-```text
-npx netlify serve
-```
-
-to create a local build and serve these built files at `http://localhost:8888`.
+For more information about Cloudflare Pages local development see [the docs](https://developers.cloudflare.com/pages/platform/functions/local-development).

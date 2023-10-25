@@ -1,3 +1,0 @@
-# Backend
-
-Netlify edge functions.
