@@ -94,6 +94,25 @@ export class NextHolidayApp extends LitElement {
     sl-select.green::part(display-input) {
       color: var(--sl-color-green-700);
     }
+
+    .selector-container {
+      display: flex;
+    }
+
+    sl-select {
+      margin-inline: 4px;
+    }
+
+    @media (max-width: 620px) {
+      .selector-container {
+        display: grid;
+        place-content: center;
+      }
+
+      sl-select {
+        margin-block: 4px;
+      }
+    }
   `;
 
   connectedCallback(): void {
@@ -106,15 +125,14 @@ export class NextHolidayApp extends LitElement {
       <div
         style="display: grid; place-content: center; font-weight: var(--sl-font-weight-bold); font-size: var(--sl-font-size-large);"
       >
-        <p style="max-width: 600px; text-align: center;">The next holiday in</p>
-        <div style="display: flex">
+        <p style="text-align: center;">The next holiday in</p>
+        <div class="selector-container">
           <sl-select
             @sl-change="${this.handleSelect}"
             id="subdivision-selector"
             pill
             value="${this.subdivisionCode}"
             class="purple"
-            style="margin-inline: 4px;"
           >
             ${this.subdivisionNames.map(
               (it, index) => html`<sl-option value="${this.subdivisionCodes[index]}">${it}</sl-option>`
@@ -126,14 +144,13 @@ export class NextHolidayApp extends LitElement {
             pill
             value="${this.countryCode}"
             class="green"
-            style="margin-inline: 4px;"
           >
             ${Object.entries(this.countries).map(
               ([code, name]) => html`<sl-option value="${code}">${name}</sl-option>`
             )}
           </sl-select>
         </div>
-        <p style="max-width: 600px; text-align: center;">
+        <p style="text-align: center;">
           is
           <span style="color: var(--sl-color-red-600)">${this.nextHoliday.name ? this.nextHoliday.name : "__"}</span>
           on
