@@ -21,6 +21,7 @@ export const onRequest: PagesFunction = async (context) => {
   // const value = await context.env.KV.get("example");
 
   console.log(JSON.stringify({ context }));
+  console.log(JSON.stringify({ "context.request.headers": context.request.headers }));
 
   return new Response("testResponse");
 };
