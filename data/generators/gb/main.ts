@@ -3,8 +3,8 @@
  */
 
 import { sortBy } from "https://deno.land/std@0.203.0/collections/sort_by.ts";
-import type { Meta } from "../../shared/types.ts";
-import { fetchJson } from "../../shared/utils.ts";
+import type { Meta } from "../../../shared/types.ts";
+import { getJson } from "../../../shared/utils.ts";
 import {
   API_DATE_STRING_REGEX,
   API_SUBDIVISION_NAMES,
@@ -42,7 +42,7 @@ if (import.meta.main) {
 // ---------------------------------------------------------------------------------------------------------------------
 
 async function getHolidays(years: Years): Promise<Holiday[]> {
-  const apiResponse = await fetchJson(API_URL);
+  const [apiResponse] = await getJson(API_URL);
 
   const result = ApiResponseSchema(apiResponse);
 
