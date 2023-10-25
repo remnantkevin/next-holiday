@@ -24,6 +24,7 @@ export const onRequest: PagesFunction = async (context) => {
   console.log({ "param keys": Object.keys(context.params) });
   console.log({ "env keys": Object.keys(context.env) });
   console.log({ "data keys": Object.keys(context.data) });
+  console.log({ "context.request.cf": context.request.cf });
   console.log({ "context.request.headers.entries()": Object.fromEntries(context.request.headers.entries()) });
 
   return new Response("testResponse");
