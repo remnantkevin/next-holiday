@@ -1,5 +1,12 @@
 # Next Holiday
 
+## Contents
+
+- [Project structure](#project-structure)
+- [Local development](#local-development)
+  - [Install dependencies](#install-dependencies)
+  - [Run website (frontend and backend)](#run-website-frontend-and-backend)
+
 ## Project structure
 
 ```text
