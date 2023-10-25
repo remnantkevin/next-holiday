@@ -17,8 +17,8 @@
 //   KV: KVNamespace;
 // }
 
-import type { SharedType } from "../../shared/types";
-import { TEST_CONSTANT } from "../../shared/constants";
+import type { SharedType } from "../shared/types";
+import { TEST_CONSTANT } from "../shared/constants";
 
 export const onRequest: PagesFunction = async (context) => {
   // const value = await context.env.KV.get("example");
