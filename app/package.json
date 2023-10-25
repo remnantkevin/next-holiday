@@ -12,7 +12,9 @@
     "lit": "^2.7.5"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231016.0",
     "typescript": "5.2.2",
-    "vite": "4.4.9"
+    "vite": "4.4.9",
+    "wrangler": "^3.14.0"
   }
 }
