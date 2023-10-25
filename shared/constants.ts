@@ -8,3 +8,11 @@ export const DATA_VERSION = "e051ea82d8cbbb08ce8ff694b5eb7686074485af";
 export const ERROR_RESPONSE_TYPE = {
   NoCountryCode: "NoCountryCode",
 } as const;
+
+export const DEFAULT_SUBDIVISION_CODE: Record<string, string> = {
+  au: "act",
+  gb: "eng",
+  ie: "c",
+  nz: "auk",
+  za: "ec",
+};
